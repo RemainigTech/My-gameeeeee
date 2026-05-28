@@ -18,7 +18,7 @@ const TileMemoryGame = {
 
         await this.showTutorial();
 
-        this.startRound();
+        TileMemoryPractice.start();
     },
 
     createGrid() {
