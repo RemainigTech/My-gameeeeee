@@ -1,0 +1,35 @@
+/* =========================================================
+   NeuroMetric Giant Cursor
+========================================================= */
+
+#giant-cursor {
+
+    position: fixed;
+
+    width: 80px;
+    height: 80px;
+
+    font-size: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10000;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        left 0.9s ease,
+        top 0.9s ease,
+        transform 0.25s ease;
+}
+
+.cursor-click {
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.8);
+}
