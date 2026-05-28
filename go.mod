@@ -1,4 +1,4 @@
-module My-gameeeeee
+module neurometric-platform
 
 go 1.21
 
