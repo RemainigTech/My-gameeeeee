@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment</title>
-</head>
-<body>
 
-    <h1>Assessment Loader</h1>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NeuroMetric Assessment</title>
+
+    <link
+        rel="stylesheet"
+        href="/public/shared/css/tutorial.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/public/shared/css/cursor.css"
+    >
+
+</head>
+
+<body>
 
     <div id="game-container"></div>
 
+    <script src="/public/shared/js/difficulty-engine.js"></script>
+
+    <script src="/public/shared/js/tutorial-engine.js"></script>
+
+    <script src="/public/shared/js/giant-cursor.js"></script>
+
+    <script src="/public/shared/js/assessment-manager.js"></script>
+
+    <script>
+
+        AssessmentManager.init();
+
+    </script>
+
 </body>
+
 </html>
