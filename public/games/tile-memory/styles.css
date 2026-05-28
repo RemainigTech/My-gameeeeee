@@ -1,0 +1,60 @@
+body {
+
+    margin: 0;
+
+    background: #f8f1e7;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+}
+
+#game-root {
+
+    text-align: center;
+}
+
+h1 {
+
+    color: #5b4636;
+
+    margin-bottom: 30px;
+}
+
+#tile-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 140px);
+
+    gap: 20px;
+
+    justify-content: center;
+}
+
+.tile {
+
+    width: 140px;
+    height: 140px;
+
+    background: #d9c2a7;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tile.active {
+
+    background: #8c5e3c;
+
+    transform: scale(1.08);
+}
