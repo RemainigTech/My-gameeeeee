@@ -17,10 +17,10 @@ RUN apk add --no-cache \
 # Create app directory
 WORKDIR /app
 
-# Copy dependency files first (better Docker caching)
+# Copy dependency files first
 COPY go.mod go.sum ./
 
-# Download dependencies
+# Download Go dependencies
 RUN go mod download
 
 # Copy full project
@@ -29,7 +29,7 @@ COPY . .
 # Build optimized binary
 RUN CGO_ENABLED=1 GOOS=linux go build \
     -ldflags="-w -s" \
-    -o server main.go
+    -o neurometric-platform main.go
 
 # ---------------------------------------------------------
 # STAGE 2 — Production Runtime
@@ -44,30 +44,30 @@ RUN apk add --no-cache \
 # Create non-root user
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
-# Set working directory
+# Create working directory
 WORKDIR /app
 
 # Copy server binary
-COPY --from=builder /app/server .
+COPY --from=builder /app/neurometric-platform .
 
-# Copy public frontend assets
+# Copy frontend/public assets
 COPY --from=builder /app/public ./public
 
 # Create persistent database folder
 RUN mkdir -p /app/data
 
-# Set ownership
+# Set permissions
 RUN chown -R appuser:appgroup /app
 
 # Switch to non-root user
 USER appuser
 
-# Expose backend port
-EXPOSE 8080
-
-# Environment variables
+# Environment Variables
 ENV PORT=8080
 ENV DB_PATH=/app/data/neurometric.db
 
+# Expose backend port
+EXPOSE 8080
+
 # Start application
-CMD ["./server"]
+CMD ["./neurometric-platform"]
