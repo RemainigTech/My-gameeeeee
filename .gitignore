@@ -1,0 +1,121 @@
+# =========================================================
+# NeuroMetric Platform - .gitignore
+# =========================================================
+
+# -------------------------
+# Go Binaries / Build Files
+# -------------------------
+server
+server.exe
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# -------------------------
+# Go Coverage / Profiling
+# -------------------------
+coverage.out
+*.prof
+
+# -------------------------
+# Database Files
+# -------------------------
+data/
+*.db
+*.sqlite
+*.sqlite3
+neurometric.db
+
+# -------------------------
+# Environment Variables
+# -------------------------
+.env
+.env.local
+.env.production
+
+# -------------------------
+# Logs
+# -------------------------
+logs/
+*.log
+
+# -------------------------
+# Node Modules (if added later)
+# -------------------------
+node_modules/
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+
+# -------------------------
+# IDE / Editor Files
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# OS Files
+# -------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# -------------------------
+# Temporary Files
+# -------------------------
+tmp/
+temp/
+*.tmp
+
+# -------------------------
+# AI / ML Models
+# -------------------------
+models/
+checkpoints/
+*.h5
+*.pt
+*.pth
+*.onnx
+
+# -------------------------
+# Audio / Render Cache
+# -------------------------
+cache/
+renders/
+
+# -------------------------
+# Build Outputs
+# -------------------------
+dist/
+build/
+
+# -------------------------
+# Large Assets (optional)
+# -------------------------
+# Uncomment if needed
+# assets/raw/
+# assets/videos/
+# assets/voice-recordings/
+
+# -------------------------
+# Mac/Linux hidden files
+# -------------------------
+.fseventsd
+.nfs*
